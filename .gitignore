@@ -1,0 +1,50 @@
+build/
+*.o
+*.elf
+*.prx
+*.PBP
+*.SFO
+assets/private/
+reference/
+*.d
+
+dist/
+__pycache__/
+
+*.upt
+*.ups
+
+# Personal converted resources and local run checkpoints
+assets/private-*/
+*.sav
+*.sav.bak
+*.sav.tmp
+
+*.upa
+audio-status.txt
+
+# User-supplied private visual references
+/phone reference/
+
+# Independent local progression and backups
+*.profile
+*.profile.bak
+*.profile.tmp
+
+# Personal offline daily records
+*.daily
+*.daily.bak
+*.daily.tmp
+
+# Converted owner-supplied achievement prose
+*.uat
+
+# Owner inputs, generated installations and settings
+/output/
+/owned/
+/recovered/
+*.exe
+*.pck
+*.cfg
+*.cfg.bak
+.env
