@@ -4,6 +4,13 @@ from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools"))
 import setup_assets,package_public
 class PublicSetupTests(unittest.TestCase):
+ def test_setup_and_readme_have_no_encoding_placeholders(self):
+  for name in ("README.md","tools/setup_assets.py","tools/setup_assets_gui.py"):
+   text=(setup_assets.ROOT/name).read_text(encoding="utf-8")
+   self.assertNotIn(" ? ",text,name)
+   self.assertNotIn("Browse?",text,name)
+   self.assertNotIn("???",text,name)
+   self.assertNotIn(chr(0xfffd),text,name)
  def test_refuses_existing_installation_without_touching_it(self):
   with tempfile.TemporaryDirectory() as d:
    root=Path(d);out=root/"install";out.mkdir();save=out/"ultrapool.sav";save.write_bytes(b"player")

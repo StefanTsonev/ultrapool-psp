@@ -1,5 +1,5 @@
 <h1 align="center">Ultrapool PSP</h1>
-<p align="center"><strong>An unofficial native PSP prototype of Ultrapool.</strong><br>C++ ? PSPSDK ? 480 ? 272 ? Work in progress</p>
+<p align="center"><strong>An unofficial native PSP prototype of Ultrapool.</strong><br>C++ | PSPSDK | 480 x 272 | Work in progress</p>
 
 This project brings Ultrapool's pool-and-roguelike loop to the PlayStation Portable. Play rounds, build a team of unusual balls, combine abilities, buy snacks and chase higher scores.
 
@@ -29,9 +29,9 @@ Download the **public prototype ZIP** from this repository's Releases page and e
 
 ### 2. Install the PC tools
 
-- [Python 3.10 or newer](https://www.python.org/downloads/) ? enable **Add Python to PATH** on Windows.
-- [GDRE Tools](https://github.com/GDRETools/gdsdecomp/releases) ? download and extract the build for your PC.
-- [FFmpeg](https://ffmpeg.org/download.html) ? put `ffmpeg` on PATH, or pass its full executable path with `--ffmpeg`.
+- [Python 3.10 or newer](https://www.python.org/downloads/) - enable **Add Python to PATH** on Windows.
+- [GDRE Tools](https://github.com/GDRETools/gdsdecomp/releases) - download and extract the build for your PC.
+- [FFmpeg](https://ffmpeg.org/download.html) - put `ffmpeg` on PATH, or pass its full executable path with `--ffmpeg`.
 
 Open a terminal in the extracted release folder and install the converter dependency:
 
@@ -45,7 +45,7 @@ On Windows, double-click **Setup-Assets.cmd** for the setup window. Choose your 
 
 Choose either method. The tool reads your files, converts only needed resources and produces a new installation folder. Conversion can take several minutes. Keep the original game and recovered files on your PC.
 
-**Option A ? you already recovered the game with GDRE Tools:**
+**Option A - you already recovered the game with GDRE Tools:**
 
 Use GDRE's **Recover project** feature, not only raw archive extraction. Imported textures/audio must have been restored and the recovered project should contain `localization`, `data`, `audio` and `singletons` folders. Select that project root:
 
@@ -53,7 +53,7 @@ Use GDRE's **Recover project** feature, not only raw archive extraction. Importe
 python tools/setup_assets.py --source "C:/Games/Ultrapool-recovered" --output "output/Ultrapool"
 ```
 
-**Option B ? start with your own Windows executable:**
+**Option B - start with your own Windows executable:**
 
 The setup tool invokes your installed GDRE Tools to recover resources in a temporary folder. It does not launch the game executable. If the installation uses a separate PCK, pass that PCK instead of the EXE.
 
@@ -69,19 +69,19 @@ Use a PSP configured to run homebrew. Copy the generated **Ultrapool** folder in
 
 ```text
 ms0:/PSP/GAME/Ultrapool/
-??? EBOOT.PBP
-??? asset-setup-report.json
-??? assets/
-    ??? definitions.txt
-    ??? private/
-        ??? *.upt          converted textures
-        ??? *.uat          converted text
-        ??? audio/
-            ??? bank.txt
-            ??? *.upa      converted music and sounds
++-- EBOOT.PBP
++-- asset-setup-report.json
++-- assets/
+    +-- definitions.txt
+    +-- private/
+        +-- *.upt          converted textures
+        +-- *.uat          converted text
+        +-- audio/
+            +-- bank.txt
+            +-- *.upa      converted music and sounds
 ```
 
-Launch it from **Game ? Memory Stick**. The original Windows EXE and recovered scripts do not belong on the PSP. To try the same installation in [PPSSPP](https://www.ppsspp.org/), open its `EBOOT.PBP` and keep `assets` beside it.
+Launch it from **Game > Memory Stick**. The original Windows EXE and recovered scripts do not belong on the PSP. To try the same installation in [PPSSPP](https://www.ppsspp.org/), open its `EBOOT.PBP` and keep `assets` beside it.
 
 For updates, back up your saves, create a fresh converted installation and merge it into your PSP folder. Keep your existing `ultrapool.sav`, profile, daily records and settings. This prototype writes run-save format v12; older builds cannot read those newer checkpoints. Quitting during a round returns to the last shop checkpoint rather than resuming mid-shot. PC/Godot saves are not supported.
 
@@ -91,15 +91,15 @@ For updates, back up your saves, create a fresh converted installation and merge
 | --- | --- |
 | Aim | Analog stick |
 | Fine aim | D-pad left / right |
-| Prepare / shoot / confirm | ? |
-| Cancel | ? |
+| Prepare / shoot / confirm | Cross (X) |
+| Cancel | Circle (O) |
 | Adjust shot power | L / R |
-| Inspect / merge in shop | ?, then follow the prompts |
-| Finish a cleared round early | ? |
+| Inspect / merge in shop | Square, then follow the prompts |
+| Finish a cleared round early | Triangle |
 | Pause and settings | Start |
 | Custom seed on home screen | L |
 | Daily calendar on home screen | R |
-| Resume checkpoint on home screen | ? |
+| Resume checkpoint on home screen | Triangle |
 
 The shop has context-sensitive prompts for buying, selling, combining and moving balls. Settings include music/SFX volume, fine aim speed, analog aiming/deadzone, tutorial hints, reduced motion and tutorial replay.
 

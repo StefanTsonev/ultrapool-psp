@@ -2,7 +2,7 @@
 import hashlib,json,shutil,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-VERSION="v0.9.5"
+VERSION="v0.9.5.1"
 TOOLS=["setup_assets.py","setup_assets_gui.py","convert_assets.py","convert_audio.py","convert_ui_text.py","convert_tutorial_text.py","convert_presentation_text.py","verify_audio.py","build_catalog.py","catalog_ids.json","manifest_psp.json","requirements.txt","visual_audit.cpp","package_public.py"]
 DOCS=["PROGRESSION_RULES.json","TUTORIAL_RULES.json","PUBLIC_PROTOTYPE.md"]
 BASE=["README.md","Setup-Assets.cmd","LICENSE","CONTRIBUTING.md","Makefile","CMakeLists.txt",".gitignore","assets/definitions.txt"]

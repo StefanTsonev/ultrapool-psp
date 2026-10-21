@@ -53,7 +53,7 @@ def build(source, output, eboot, ffmpeg="ffmpeg", manifest=None):
   (stage/"asset-setup-report.json").write_text(json.dumps(report,indent=2))
   if output.exists():raise FileExistsError(output)
   stage.rename(output)
- print("[5/5] Ready: "+str(output)+" ? copy this folder into PSP/GAME. Do not redistribute converted resources.")
+ print("[5/5] Ready: "+str(output)+" - copy this folder into PSP/GAME. Do not redistribute converted resources.")
  return report
 
 def main():

@@ -4,9 +4,9 @@ import queue,subprocess,sys,threading,tkinter as tk
 from tkinter import filedialog,messagebox,ttk
 ROOT=Path(__file__).resolve().parents[1]
 def main():
- window=tk.Tk();window.title("Ultrapool PSP ? personal asset setup");window.geometry("790x610")
+ window=tk.Tk();window.title("Ultrapool PSP - personal asset setup");window.geometry("790x610")
  frame=ttk.Frame(window,padding=16);frame.pack(fill="both",expand=True)
- ttk.Label(frame,text="Ultrapool PSP ? prototype",font=("Segoe UI",16,"bold")).pack(anchor="w")
+ ttk.Label(frame,text="Ultrapool PSP - prototype",font=("Segoe UI",16,"bold")).pack(anchor="w")
  ttk.Label(frame,text="Use your own Windows game or a complete GDRE-recovered project.\nConverted assets are private; do not redistribute them.").pack(anchor="w",pady=(4,12))
  mode=tk.StringVar(value="source");choice=ttk.Frame(frame);choice.pack(fill="x")
  ttk.Radiobutton(choice,text="Recovered project folder",variable=mode,value="source").pack(side="left")
@@ -23,7 +23,7 @@ def main():
     value=str(Path(parent)/"Ultrapool") if parent else ""
    else:value=filedialog.askopenfilename()
    if value:var.set(value)
-  ttk.Button(line,text="Browse?",command=browse).pack(side="left",padx=(6,0))
+  ttk.Button(line,text="Browse...",command=browse).pack(side="left",padx=(6,0))
  row("Recovered project", "source","folder")
  row("Original game EXE / PCK","exe","file")
  row("GDRE Tools executable","gdre","file")

@@ -1,8 +1,10 @@
-# v0.9.5 public prototype
+# v0.9.5.1 public prototype
 
 Unofficial native PSP implementation. This release is a prerelease, not a finished recreation.
 
 ## Changes
+
+Tooling-only patch: fix text encoding damage in the README and asset setup window. The PSP executable is unchanged from v0.9.5.
 
 Owner-side asset setup now accepts a GDRE-recovered folder or invokes an installed GDRE Tools against an owned Windows EXE/PCK. A Windows setup window and terminal tool share the conversion pipeline. The generated installation includes texture, audio, achievement, tutorial, ball-description and dialogue banks. Existing output folders are refused and conversion is staged before installation is published.
 
@@ -18,6 +20,6 @@ English presentation text is converted. Native checkpoints are version 12 and re
 
 ## Publishing
 
-Use only the staged `dist/public/v0.9.5/ultrapool-psp` source folder for the repository. Upload the `prototype.zip` and checksums from that same directory as release assets and mark the release **Pre-release**. Do not upload `dist/private`, the working directory, recovered resources, game executable, personal saves, or a generated asset installation. The source ZIP is optional because GitHub also generates source downloads.
+Use only the staged `dist/public/v0.9.5.1/ultrapool-psp` source folder for the repository. Upload the `prototype.zip` and checksums from that same directory as release assets and mark the release **Pre-release**. Do not upload `dist/private`, the working directory, recovered resources, game executable, personal saves, or a generated asset installation. The source ZIP is optional because GitHub also generates source downloads.
 
 The public packager uses a source allowlist and checks archive entries for resource and save formats. MIT covers independent project code; original game resources remain owned by their respective holders.
