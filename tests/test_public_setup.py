@@ -41,7 +41,7 @@ class PublicSetupTests(unittest.TestCase):
  def test_public_files_have_no_resources_or_player_data(self):
   files=package_public.source_files()
   self.assertTrue(files)
-  self.assertFalse(any(p.suffix.lower() in package_public.FORBIDDEN for p in files))
+  self.assertFalse(any(p.suffix.lower() in package_public.FORBIDDEN and p.relative_to(package_public.ROOT).as_posix() not in package_public.SCREENSHOTS for p in files))
   self.assertFalse(any("private" in p.relative_to(package_public.ROOT).parts for p in files))
  def test_failed_conversion_does_not_publish_partial_installation(self):
   with tempfile.TemporaryDirectory() as d:

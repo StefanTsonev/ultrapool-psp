@@ -5,6 +5,18 @@ This project brings Ultrapool's pool-and-roguelike loop to the PlayStation Porta
 
 **This is a prototype.** Gameplay differences, unfinished interactions and visual issues remain. Feedback, bug reports and contributions are welcome. It is independently implemented; the PSP does not run the original Godot scripts.
 
+## Screenshots
+
+Prototype screenshots captured in PPSSPP. These show the game with owner-converted resources; game assets are not included in public downloads.
+
+<p align="center">
+  <img src="screenshots/aiming.jpg" alt="Pool table with aiming and collision trajectory guides" width="48%" />
+  <img src="screenshots/shop.jpg" alt="Ball shop, merchant and triangular player build" width="48%" />
+  <br />
+  <img src="screenshots/home.jpg" alt="Ultrapool PSP home screen and Classic mode selection" width="48%" />
+  <img src="screenshots/round-results.jpg" alt="Round won screen showing score and earnings" width="48%" />
+</p>
+
 ## Ownership and resources
 
 This project is not affiliated with or endorsed by Ultrapool's creators. The original game, artwork, music, fonts and text belong to their respective owners. The MIT license covers this project's independently written code, not the original game's resources.
